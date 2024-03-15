@@ -12,11 +12,15 @@
     left: 0;
     bottom: 0;
     z-index: 10;
-    height: 153px;
+    height: 250px;
     width: 100%;
+    @media screen and (max-width: 1920px) {
+      height: 150px;
+    }
     img {
       background-size: cover;
       height: 100%;
+      width: 100%;
     }
 
     @include max1024 {

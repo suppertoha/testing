@@ -602,12 +602,18 @@ footer .info .blocks a {
   left: 0;
   bottom: 0;
   z-index: 10;
-  height: 153px;
+  height: 250px;
   width: 100%;
+}
+@media screen and (max-width: 1920px) {
+  .hero__bg {
+    height: 150px;
+  }
 }
 .hero__bg img {
   background-size: cover;
   height: 100%;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   .hero__bg {

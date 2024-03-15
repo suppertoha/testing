@@ -1,0 +1,204 @@
+.hero {
+  position: relative;
+  padding-bottom: 65px;
+  position: relative;
+  @include max600 {
+    padding-bottom: 20px;
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    height: 153px;
+    width: 100%;
+    img {
+      background-size: cover;
+      height: 100%;
+    }
+
+    @include max1024 {
+      height: 100px;
+    }
+
+    @include max600 {
+      height: 50px;
+    }
+  }
+
+  &--mt {
+    margin-top: 70px;
+    letter-spacing: 1.7px;
+
+    @include max600 {
+      margin-top: 15px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    flex: 1 1 614px;
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 318px;
+      height: 515px;
+      position: absolute;
+      left: -28%;
+      top: -12%;
+      background: url(../img/hero-block-fon.svg) no-repeat;
+
+      @media screen and (max-width: 1240px) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    width: 78%;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width: 1240px) {
+      width: 100%;
+      text-align: center;
+    }
+
+    @include max600 {
+      width: 80%;
+      margin: 0 auto 12px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    @media screen and (max-width: 1240px) {
+      flex-direction: column;
+    }
+  }
+
+  &__block-text {
+    @media screen and (max-width: 1240px) {
+      max-width: 40%;
+    }
+
+    @include max600 {
+      max-width: 86%;
+    }
+  }
+
+  &__item {
+    width: 266px;
+    height: 100%;
+    margin-right: 50px;
+    flex-shrink: 0;
+
+    @media screen and (max-width: 1240px) {
+      margin-bottom: 60px;
+    }
+
+    @include max991 {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    @include max600 {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 45px;
+    }
+  }
+
+  &__wrap {
+    @include max991 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include max600 {
+      .title-h2--mb {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 54px;
+    position: relative;
+    z-index: 11;
+    @include max991 {
+      width: 60%;
+    }
+
+    @include max600 {
+      padding: 20px 20px;
+      width: 77%;
+      margin: 25px auto 0;
+    }
+  }
+
+  &__image {
+    flex: 0 1 510px;
+    position: relative;
+    margin-top: 18px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 747px;
+      height: 615px;
+      position: absolute;
+      left: -55px;
+      top: -65px;
+      background: url(../img/hero-arrow-fon.svg) no-repeat;
+
+      @media screen and (max-width: 1240px) {
+        left: -170px;
+      }
+
+      @include max1024 {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1240px) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    @include max991 {
+      right: -267px;
+    }
+
+    @include max600 {
+      right: -64px;
+      bottom: 20px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 2;
+    display: flex;
+
+    @include max600 {
+      right: 0;
+      height: 240px;
+      img {
+        object-fit: contain;
+        height: auto;
+      }
+    }
+  }
+}
